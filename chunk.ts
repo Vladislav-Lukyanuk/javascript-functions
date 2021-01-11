@@ -1,9 +1,9 @@
-function chunk(array: any[], size = 1): any[][] {
+function chunk<T>(array: T[], size = 1): T[][] {
     if (size < 1 || !array.length) {
         return [];
     }
 
-    const chunks = new Array(Math.ceil(array.length / size));
+    const chunks = new Array<T>(Math.ceil(array.length / size));
     
     let index = 0;
 
